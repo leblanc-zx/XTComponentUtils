@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'XTComponentUtils'
-  s.version          = '1.0.5'
+  s.version          = '1.0.6'
   s.summary          = 'XTComponentUtils.描述'
 
 # This description is used to generate tags and improve search results.
@@ -32,18 +32,18 @@ TODO: Add long description of the pod here.
 
 s.source_files = 'XTComponentUtils/*.{h,m}'
   # 配置子目录
-  s.subspec 'Utils' do |utils|
-  utils.source_files = 'XTComponentUtils/Utils/*'
-  utils.dependency 'XTComponentUtils/Models/*'
-  utils.dependency 'XTComponentUtils/LocalDependency/*'
-  end
-
   s.subspec 'Models' do |models|
   models.source_files = 'XTComponentUtils/Models/*'
   end
 
   s.subspec 'LocalDependency' do |localDependency|
   localDependency.source_files = 'XTComponentUtils/LocalDependency/*'
+  end
+
+  s.subspec 'Utils' do |utils|
+  utils.source_files = 'XTComponentUtils/Utils/*'
+  utils.dependency 'XTComponentUtils/Models/*'
+  utils.dependency 'XTComponentUtils/LocalDependency/*'
   end
   
   # s.resource_bundles = {
