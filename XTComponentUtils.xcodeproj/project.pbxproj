@@ -23,6 +23,8 @@
 		1811A8B721941641005F658E /* NSString+XTEncryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 1811A8A721941641005F658E /* NSString+XTEncryption.m */; };
 		1811A8B821941641005F658E /* NSString+XTHash.h in Headers */ = {isa = PBXBuildFile; fileRef = 1811A8A821941641005F658E /* NSString+XTHash.h */; };
 		1811A8B921941641005F658E /* NSString+XTHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 1811A8A921941641005F658E /* NSString+XTHash.m */; };
+		1811A8BB2194179B005F658E /* XTComponentUtils.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 1811A8BA2194179B005F658E /* XTComponentUtils.podspec */; };
+		1811A8BD219417A7005F658E /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 1811A8BC219417A7005F658E /* LICENSE */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		1811A8A721941641005F658E /* NSString+XTEncryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XTEncryption.m"; sourceTree = "<group>"; };
 		1811A8A821941641005F658E /* NSString+XTHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XTHash.h"; sourceTree = "<group>"; };
 		1811A8A921941641005F658E /* NSString+XTHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XTHash.m"; sourceTree = "<group>"; };
+		1811A8BA2194179B005F658E /* XTComponentUtils.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = XTComponentUtils.podspec; sourceTree = "<group>"; };
+		1811A8BC219417A7005F658E /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 		1811A8822194131F005F658E = {
 			isa = PBXGroup;
 			children = (
+				1811A8BC219417A7005F658E /* LICENSE */,
+				1811A8BA2194179B005F658E /* XTComponentUtils.podspec */,
 				1811A88E2194131F005F658E /* XTComponentUtils */,
 				1811A88D2194131F005F658E /* Products */,
 			);
@@ -196,6 +202,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1811A8BD219417A7005F658E /* LICENSE in Resources */,
+				1811A8BB2194179B005F658E /* XTComponentUtils.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
