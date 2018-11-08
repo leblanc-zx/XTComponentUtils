@@ -7,13 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1811A8912194131F005F658E /* XTComponentUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 1811A88F2194131F005F658E /* XTComponentUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1811A8AA21941641005F658E /* XTPriceGroupInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 1811A89821941641005F658E /* XTPriceGroupInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1811A8AB21941641005F658E /* XTPriceGroupInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1811A89921941641005F658E /* XTPriceGroupInfo.m */; };
+		1811A8AC21941641005F658E /* XTUtils+AES.h in Headers */ = {isa = PBXBuildFile; fileRef = 1811A89B21941641005F658E /* XTUtils+AES.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1811A8AD21941641005F658E /* XTUtils+AES.m in Sources */ = {isa = PBXBuildFile; fileRef = 1811A89C21941641005F658E /* XTUtils+AES.m */; };
+		1811A8AE21941641005F658E /* XTUtils+Date.h in Headers */ = {isa = PBXBuildFile; fileRef = 1811A89D21941641005F658E /* XTUtils+Date.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1811A8AF21941641005F658E /* XTUtils+Date.m in Sources */ = {isa = PBXBuildFile; fileRef = 1811A89E21941641005F658E /* XTUtils+Date.m */; };
+		1811A8B021941641005F658E /* XTUtils+DES.h in Headers */ = {isa = PBXBuildFile; fileRef = 1811A89F21941641005F658E /* XTUtils+DES.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1811A8B121941641005F658E /* XTUtils+DES.m in Sources */ = {isa = PBXBuildFile; fileRef = 1811A8A021941641005F658E /* XTUtils+DES.m */; };
+		1811A8B221941641005F658E /* XTUtils+PriceGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 1811A8A121941641005F658E /* XTUtils+PriceGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1811A8B321941641005F658E /* XTUtils+PriceGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 1811A8A221941641005F658E /* XTUtils+PriceGroup.m */; };
+		1811A8B421941641005F658E /* XTUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 1811A8A321941641005F658E /* XTUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1811A8B521941641005F658E /* XTUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1811A8A421941641005F658E /* XTUtils.m */; };
+		1811A8B621941641005F658E /* NSString+XTEncryption.h in Headers */ = {isa = PBXBuildFile; fileRef = 1811A8A621941641005F658E /* NSString+XTEncryption.h */; };
+		1811A8B721941641005F658E /* NSString+XTEncryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 1811A8A721941641005F658E /* NSString+XTEncryption.m */; };
+		1811A8B821941641005F658E /* NSString+XTHash.h in Headers */ = {isa = PBXBuildFile; fileRef = 1811A8A821941641005F658E /* NSString+XTHash.h */; };
+		1811A8B921941641005F658E /* NSString+XTHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 1811A8A921941641005F658E /* NSString+XTHash.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1811A88C2194131F005F658E /* XTComponentUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XTComponentUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1811A88F2194131F005F658E /* XTComponentUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTComponentUtils.h; sourceTree = "<group>"; };
 		1811A8902194131F005F658E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1811A89821941641005F658E /* XTPriceGroupInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTPriceGroupInfo.h; sourceTree = "<group>"; };
+		1811A89921941641005F658E /* XTPriceGroupInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTPriceGroupInfo.m; sourceTree = "<group>"; };
+		1811A89B21941641005F658E /* XTUtils+AES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XTUtils+AES.h"; sourceTree = "<group>"; };
+		1811A89C21941641005F658E /* XTUtils+AES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XTUtils+AES.m"; sourceTree = "<group>"; };
+		1811A89D21941641005F658E /* XTUtils+Date.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XTUtils+Date.h"; sourceTree = "<group>"; };
+		1811A89E21941641005F658E /* XTUtils+Date.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XTUtils+Date.m"; sourceTree = "<group>"; };
+		1811A89F21941641005F658E /* XTUtils+DES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XTUtils+DES.h"; sourceTree = "<group>"; };
+		1811A8A021941641005F658E /* XTUtils+DES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XTUtils+DES.m"; sourceTree = "<group>"; };
+		1811A8A121941641005F658E /* XTUtils+PriceGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XTUtils+PriceGroup.h"; sourceTree = "<group>"; };
+		1811A8A221941641005F658E /* XTUtils+PriceGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XTUtils+PriceGroup.m"; sourceTree = "<group>"; };
+		1811A8A321941641005F658E /* XTUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTUtils.h; sourceTree = "<group>"; };
+		1811A8A421941641005F658E /* XTUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTUtils.m; sourceTree = "<group>"; };
+		1811A8A621941641005F658E /* NSString+XTEncryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XTEncryption.h"; sourceTree = "<group>"; };
+		1811A8A721941641005F658E /* NSString+XTEncryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XTEncryption.m"; sourceTree = "<group>"; };
+		1811A8A821941641005F658E /* NSString+XTHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XTHash.h"; sourceTree = "<group>"; };
+		1811A8A921941641005F658E /* NSString+XTHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XTHash.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,10 +76,49 @@
 		1811A88E2194131F005F658E /* XTComponentUtils */ = {
 			isa = PBXGroup;
 			children = (
-				1811A88F2194131F005F658E /* XTComponentUtils.h */,
+				1811A8A521941641005F658E /* LocalDependency */,
+				1811A89721941641005F658E /* Models */,
+				1811A89A21941641005F658E /* Utils */,
 				1811A8902194131F005F658E /* Info.plist */,
 			);
 			path = XTComponentUtils;
+			sourceTree = "<group>";
+		};
+		1811A89721941641005F658E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1811A89821941641005F658E /* XTPriceGroupInfo.h */,
+				1811A89921941641005F658E /* XTPriceGroupInfo.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1811A89A21941641005F658E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				1811A8A321941641005F658E /* XTUtils.h */,
+				1811A8A421941641005F658E /* XTUtils.m */,
+				1811A89B21941641005F658E /* XTUtils+AES.h */,
+				1811A89C21941641005F658E /* XTUtils+AES.m */,
+				1811A89D21941641005F658E /* XTUtils+Date.h */,
+				1811A89E21941641005F658E /* XTUtils+Date.m */,
+				1811A89F21941641005F658E /* XTUtils+DES.h */,
+				1811A8A021941641005F658E /* XTUtils+DES.m */,
+				1811A8A121941641005F658E /* XTUtils+PriceGroup.h */,
+				1811A8A221941641005F658E /* XTUtils+PriceGroup.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		1811A8A521941641005F658E /* LocalDependency */ = {
+			isa = PBXGroup;
+			children = (
+				1811A8A621941641005F658E /* NSString+XTEncryption.h */,
+				1811A8A721941641005F658E /* NSString+XTEncryption.m */,
+				1811A8A821941641005F658E /* NSString+XTHash.h */,
+				1811A8A921941641005F658E /* NSString+XTHash.m */,
+			);
+			path = LocalDependency;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,7 +128,14 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1811A8912194131F005F658E /* XTComponentUtils.h in Headers */,
+				1811A8AE21941641005F658E /* XTUtils+Date.h in Headers */,
+				1811A8AC21941641005F658E /* XTUtils+AES.h in Headers */,
+				1811A8AA21941641005F658E /* XTPriceGroupInfo.h in Headers */,
+				1811A8B021941641005F658E /* XTUtils+DES.h in Headers */,
+				1811A8B421941641005F658E /* XTUtils.h in Headers */,
+				1811A8B221941641005F658E /* XTUtils+PriceGroup.h in Headers */,
+				1811A8B621941641005F658E /* NSString+XTEncryption.h in Headers */,
+				1811A8B821941641005F658E /* NSString+XTHash.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +206,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1811A8B121941641005F658E /* XTUtils+DES.m in Sources */,
+				1811A8B521941641005F658E /* XTUtils.m in Sources */,
+				1811A8AB21941641005F658E /* XTPriceGroupInfo.m in Sources */,
+				1811A8AF21941641005F658E /* XTUtils+Date.m in Sources */,
+				1811A8AD21941641005F658E /* XTUtils+AES.m in Sources */,
+				1811A8B721941641005F658E /* NSString+XTEncryption.m in Sources */,
+				1811A8B321941641005F658E /* XTUtils+PriceGroup.m in Sources */,
+				1811A8B921941641005F658E /* NSString+XTHash.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,8 +341,13 @@
 		1811A8952194131F005F658E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					armv7s,
+				);
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = NO;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = W5PF7FXF7J;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -266,11 +355,14 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = XTComponentUtils/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = staticlib;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = suntront.com.cn.XTComponentUtils;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -281,8 +373,13 @@
 		1811A8962194131F005F658E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					armv7s,
+				);
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = NO;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = W5PF7FXF7J;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -290,11 +387,14 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = XTComponentUtils/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = staticlib;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = suntront.com.cn.XTComponentUtils;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
