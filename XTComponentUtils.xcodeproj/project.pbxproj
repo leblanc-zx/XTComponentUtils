@@ -25,6 +25,7 @@
 		1811A8B921941641005F658E /* NSString+XTHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 1811A8A921941641005F658E /* NSString+XTHash.m */; };
 		1811A8BB2194179B005F658E /* XTComponentUtils.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 1811A8BA2194179B005F658E /* XTComponentUtils.podspec */; };
 		1811A8BD219417A7005F658E /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 1811A8BC219417A7005F658E /* LICENSE */; };
+		18BBC5AA21942410002D62F6 /* XTComponentUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 18BBC5A821942410002D62F6 /* XTComponentUtils.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		1811A8A921941641005F658E /* NSString+XTHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XTHash.m"; sourceTree = "<group>"; };
 		1811A8BA2194179B005F658E /* XTComponentUtils.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = XTComponentUtils.podspec; sourceTree = "<group>"; };
 		1811A8BC219417A7005F658E /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		18BBC5A821942410002D62F6 /* XTComponentUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XTComponentUtils.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				1811A89721941641005F658E /* Models */,
 				1811A89A21941641005F658E /* Utils */,
 				1811A8902194131F005F658E /* Info.plist */,
+				18BBC5A821942410002D62F6 /* XTComponentUtils.h */,
 			);
 			path = XTComponentUtils;
 			sourceTree = "<group>";
@@ -136,6 +139,7 @@
 			files = (
 				1811A8AE21941641005F658E /* XTUtils+Date.h in Headers */,
 				1811A8AC21941641005F658E /* XTUtils+AES.h in Headers */,
+				18BBC5AA21942410002D62F6 /* XTComponentUtils.h in Headers */,
 				1811A8AA21941641005F658E /* XTPriceGroupInfo.h in Headers */,
 				1811A8B021941641005F658E /* XTUtils+DES.h in Headers */,
 				1811A8B421941641005F658E /* XTUtils.h in Headers */,
