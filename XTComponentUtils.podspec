@@ -30,7 +30,19 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'XTComponentUtils/Utils','XTComponentUtils/Models','XTComponentUtils/LocalDependency'
+s.source_files = 'XTComponentUtils/*.{h,m}'
+  # 配置子目录
+  s.subspec 'Utils' do |utils|
+  utils.source_files = 'XTComponentUtils/Utils/*'
+  end
+
+  s.subspec 'Models' do |models|
+  models.source_files = 'XTComponentUtils/Models/*'
+  end
+
+  s.subspec 'LocalDependency' do |localDependency|
+  localDependency.source_files = 'XTComponentUtils/LocalDependency/*'
+  end
   
   # s.resource_bundles = {
   #   'XTComponentUtils' => ['XTComponentUtils/Assets/*.png']
