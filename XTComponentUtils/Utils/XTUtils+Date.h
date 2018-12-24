@@ -59,6 +59,24 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (NSString *)timeStringWithTimeInterval:(long long)timeInterval sinceTime:(NSString *)sinceTime formatter:(NSString *)formatter;
 
+/**
+ 获取最新时间 = 时间间隔 + 1970年开始
+ 
+ @param timeInterval 时间间隔
+ @param formatter 时间格式
+ @return 新时间字符串
+ */
++ (NSString *)timeStringWithTimeIntervalSince1970:(long long)timeInterval formatter:(NSString *)formatter;
+
+/**
+ 获取某月月初&月末
+ 
+ @param monthBegin 月初
+ @param monthEnd 月末
+ @param date 某月date
+ */
++ (void)monthBegin:(NSDate **)monthBegin monthEnd:(NSDate **)monthEnd forDate:(NSDate *)date;
+
 @end
 
 NS_ASSUME_NONNULL_END

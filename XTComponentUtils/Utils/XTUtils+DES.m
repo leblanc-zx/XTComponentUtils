@@ -7,7 +7,20 @@
 //
 
 #import "XTUtils+DES.h"
+#import "DesEntry.h"
 
-@implementation XTUtils_DES
+@implementation XTUtils (DES)
+
+/**
+ 获取密文口令
+
+ @param command 明文
+ @param random 随机数
+ @return 密文
+ */
++ (NSString *)desWithCommand:(NSString *)command random:(NSString *)random {
+    DesEntry *desEntry = [[DesEntry alloc] init];
+    return [desEntry desNFC:command random:random];
+}
 
 @end

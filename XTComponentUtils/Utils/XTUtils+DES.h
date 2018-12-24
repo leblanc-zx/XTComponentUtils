@@ -10,7 +10,16 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface XTUtils_DES : XTUtils
+@interface XTUtils (DES)
+
+/**
+ 获取密文口令
+ 
+ @param command 明文
+ @param random 随机数
+ @return 密文
+ */
++ (NSString *)desWithCommand:(NSString *)command random:(NSString *)random;
 
 @end
 

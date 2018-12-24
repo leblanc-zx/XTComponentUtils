@@ -1,5 +1,5 @@
 //
-//  Utils.m
+//  XTUtils.m
 //  MobileInternetMeterReadingSystem
 //
 //  Created by apple on 2017/9/27.
@@ -152,7 +152,23 @@
     return newData;
 }
 
-#pragma -mark hex & Data otherMethods
+/**
+ 校验和算法 取反+1
+ 
+ @param originData 原始Data
+ @return NSData校验和
+ */
++ (NSData *)checkNegationGalOneSumDataWithOriginData:(NSData *)originData {
+    Byte *byteData = (Byte *)malloc(originData.length);
+    memcpy(byteData, [originData bytes], originData.length);
+    int sum = [self checksumWithBytes:byteData startIndex:0 endIndex:(int)originData.length];
+    Byte b1 = (Byte)(sum & 0xff);
+    Byte b2 = (Byte)(0xFF - b1 + 1);
+    Byte sumBytes[] = {b2};
+    NSData *newData = [NSData dataWithBytes:sumBytes length:1];
+    return newData;
+}
+
 /**
  校验和算法
  
@@ -172,6 +188,7 @@
     return temp;
 }
 
+#pragma -mark hex & Data otherMethods
 
 /**
  8字节十六进制随机串

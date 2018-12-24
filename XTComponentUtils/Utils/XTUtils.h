@@ -1,5 +1,5 @@
 //
-//  Utils.h
+//  XTUtils.h
 //  MobileInternetMeterReadingSystem
 //
 //  Created by apple on 2017/9/27.
@@ -70,6 +70,14 @@
  @return NSData校验和
  */
 + (NSData *)checksumDataWithOriginData:(NSData *)originData;
+
+/**
+ 校验和算法 取反+1
+ 
+ @param originData 原始Data
+ @return NSData校验和
+ */
++ (NSData *)checkNegationGalOneSumDataWithOriginData:(NSData *)originData;
 
 /**
  校验和算法

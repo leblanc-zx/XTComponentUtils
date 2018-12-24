@@ -83,5 +83,47 @@
     return [dateFormate stringFromDate:newDate];
 }
 
+/**
+ 获取最新时间 = 时间间隔 + 1970年开始
+
+ @param timeInterval 时间间隔
+ @param formatter 时间格式
+ @return 新时间字符串
+ */
++ (NSString *)timeStringWithTimeIntervalSince1970:(long long)timeInterval formatter:(NSString *)formatter {
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:timeInterval];
+    NSDateFormatter *dateFormate = [[NSDateFormatter alloc] init];
+    [dateFormate setDateFormat:formatter];
+    NSString *timeStr = [dateFormate stringFromDate:date];
+    return timeStr;
+}
+
+
+/**
+ 获取某月月初&月末
+
+ @param monthBegin 月初
+ @param monthEnd 月末
+ @param date 某月date
+ */
++ (void)monthBegin:(NSDate **)monthBegin monthEnd:(NSDate **)monthEnd forDate:(NSDate *)date {
+    
+    NSDate *newDate = date;
+    double interval = 0;
+    NSDate *beginDate = nil;
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    
+    [calendar setFirstWeekday:2];//设定周一为周首日
+    BOOL ok = [calendar rangeOfUnit:NSCalendarUnitMonth startDate:&beginDate interval:&interval forDate:newDate];
+    
+    //分别修改为 NSDayCalendarUnit NSWeekCalendarUnit NSYearCalendarUnit
+    if (ok) {
+        *monthEnd = [beginDate dateByAddingTimeInterval:interval-1];
+    } else {
+        
+    }
+    *monthBegin = beginDate;
+    
+}
 
 @end
