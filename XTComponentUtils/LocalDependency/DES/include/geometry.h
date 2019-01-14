@@ -31,7 +31,7 @@ typedef struct Point_
 {
   double      x, y, z;
 
-} Point;
+} Point_;
 
 
 /**
@@ -41,7 +41,7 @@ typedef struct SPoint_
 {
   double      rho, theta, phi;
 
-} SPoint;
+} SPoint_;
 
 
 /**
@@ -53,7 +53,7 @@ typedef struct SPoint_
  @param p4 线段 2 终点
  @return 两条线段相交返回1；否则返回0
  */
-int lint(Point p1, Point p2, Point p3, Point p4);
+int lint(Point_ p1, Point_ p2, Point_ p3, Point_ p4);
 
 
 /**
@@ -73,6 +73,6 @@ int cvxhull(const List *P, List *polygon);
  @param p2 球坐标系中的点 2
  @param length 弧长
  */
-void arclen(SPoint p1, SPoint p2, double *length);
+void arclen(SPoint_ p1, SPoint_ p2, double *length);
 
 #endif /* GEOMETRY_H */

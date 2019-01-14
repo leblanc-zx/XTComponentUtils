@@ -13,9 +13,9 @@
 #pragma mark - Public
 
 
-void arclen(SPoint p1, SPoint p2, double *length)
+void arclen(SPoint_ p1, SPoint_ p2, double *length)
 {
-  Point     p1_rct, p2_rct;
+  Point_     p1_rct, p2_rct;
   double    alpha, dot;
 
   /// 将球面坐标系转换为直角坐标系

@@ -18,7 +18,7 @@
 int cvxhull(const List *P, List *polygon)
 {
   ListElmt    *element;
-  Point       *min, *low = NULL, *p0, *pi, *pc = NULL;
+  Point_       *min, *low = NULL, *p0, *pi, *pc = NULL;
   double      z, length1, length2;
   int         count;
   

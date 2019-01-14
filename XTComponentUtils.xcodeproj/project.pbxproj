@@ -115,11 +115,11 @@
 		1863FC6C21A4051300A133DC /* tsp.c in Sources */ = {isa = PBXBuildFile; fileRef = 1863FC1221A4051200A133DC /* tsp.c */; };
 		1863FC6D21A4051300A133DC /* zxDes.c in Sources */ = {isa = PBXBuildFile; fileRef = 1863FC1321A4051200A133DC /* zxDes.c */; };
 		1863FC6E21A4051300A133DC /* zxDes.h in Headers */ = {isa = PBXBuildFile; fileRef = 1863FC1421A4051200A133DC /* zxDes.h */; };
-		186E639A21A54741002E7A77 /* XTUtils+Validate.h in Headers */ = {isa = PBXBuildFile; fileRef = 186E639821A54741002E7A77 /* XTUtils+Validate.h */; };
+		186E639A21A54741002E7A77 /* XTUtils+Validate.h in Headers */ = {isa = PBXBuildFile; fileRef = 186E639821A54741002E7A77 /* XTUtils+Validate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		186E639B21A54741002E7A77 /* XTUtils+Validate.m in Sources */ = {isa = PBXBuildFile; fileRef = 186E639921A54741002E7A77 /* XTUtils+Validate.m */; };
-		186E639E21A54989002E7A77 /* XTUtils+MD5.h in Headers */ = {isa = PBXBuildFile; fileRef = 186E639C21A54989002E7A77 /* XTUtils+MD5.h */; };
+		186E639E21A54989002E7A77 /* XTUtils+MD5.h in Headers */ = {isa = PBXBuildFile; fileRef = 186E639C21A54989002E7A77 /* XTUtils+MD5.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		186E639F21A54989002E7A77 /* XTUtils+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 186E639D21A54989002E7A77 /* XTUtils+MD5.m */; };
-		186E63A221A54B12002E7A77 /* XTUtils+UIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 186E63A021A54B12002E7A77 /* XTUtils+UIKit.h */; };
+		186E63A221A54B12002E7A77 /* XTUtils+UIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 186E63A021A54B12002E7A77 /* XTUtils+UIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		186E63A321A54B12002E7A77 /* XTUtils+UIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 186E63A121A54B12002E7A77 /* XTUtils+UIKit.m */; };
 		186E63A621A54BCE002E7A77 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 186E63A521A54BCE002E7A77 /* UIKit.framework */; };
 /* End PBXBuildFile section */
@@ -464,6 +464,9 @@
 				1863FC2121A4051200A133DC /* directls.h in Headers */,
 				1863FC3B21A4051200A133DC /* symbol.h in Headers */,
 				1863FC3721A4051200A133DC /* set.h in Headers */,
+				186E639A21A54741002E7A77 /* XTUtils+Validate.h in Headers */,
+				186E63A221A54B12002E7A77 /* XTUtils+UIKit.h in Headers */,
+				186E639E21A54989002E7A77 /* XTUtils+MD5.h in Headers */,
 				1863FC2821A4051200A133DC /* graph.h in Headers */,
 				1863FC2221A4051200A133DC /* dlist.h in Headers */,
 				1863FC3621A4051200A133DC /* search.h in Headers */,
@@ -502,14 +505,11 @@
 				1811A8B021941641005F658E /* XTUtils+DES.h in Headers */,
 				1811A8B421941641005F658E /* XTUtils.h in Headers */,
 				1863FC1D21A4051200A133DC /* clist.h in Headers */,
-				186E639A21A54741002E7A77 /* XTUtils+Validate.h in Headers */,
 				1811A8B221941641005F658E /* XTUtils+PriceGroup.h in Headers */,
 				1863FC2E21A4051200A133DC /* nummeths.h in Headers */,
 				1811A8B621941641005F658E /* NSString+XTEncryption.h in Headers */,
-				186E639E21A54989002E7A77 /* XTUtils+MD5.h in Headers */,
 				1863FC2921A4051200A133DC /* graphalg.h in Headers */,
 				1811A8B821941641005F658E /* NSString+XTHash.h in Headers */,
-				186E63A221A54B12002E7A77 /* XTUtils+UIKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

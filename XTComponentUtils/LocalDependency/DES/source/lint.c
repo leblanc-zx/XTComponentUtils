@@ -11,7 +11,7 @@
 #pragma mark - Public
 
 
-int lint(Point p1, Point p2, Point p3, Point p4)
+int lint(Point_ p1, Point_ p2, Point_ p3, Point_ p4)
 {
   double    z1, z2, z3, z4;
   int       s1, s2, s3, s4;

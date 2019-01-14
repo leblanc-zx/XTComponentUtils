@@ -15,7 +15,7 @@
 int geodist(double lat1, double lon1, double lat2, double lon2, double *d)
 {
 
-  SPoint      p1, p2;
+  SPoint_      p1, p2;
 
   /// 检验坐标是否合法
   if (lat1 <  -90.0 || lat1 >  90.0 || lat2 <  -90.0 || lat2 >  90.0) return -1;
