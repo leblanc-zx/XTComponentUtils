@@ -27,6 +27,8 @@
 		1811A8BD219417A7005F658E /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 1811A8BC219417A7005F658E /* LICENSE */; };
 		185873D1222641CF00A16DE8 /* XTUtils+Float.h in Headers */ = {isa = PBXBuildFile; fileRef = 185873CF222641CF00A16DE8 /* XTUtils+Float.h */; };
 		185873D2222641CF00A16DE8 /* XTUtils+Float.m in Sources */ = {isa = PBXBuildFile; fileRef = 185873D0222641CF00A16DE8 /* XTUtils+Float.m */; };
+		185874042226613100A16DE8 /* XTUtils+Image.h in Headers */ = {isa = PBXBuildFile; fileRef = 185874022226613100A16DE8 /* XTUtils+Image.h */; };
+		185874052226613100A16DE8 /* XTUtils+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 185874032226613100A16DE8 /* XTUtils+Image.m */; };
 		1863FC1521A4051200A133DC /* DesEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = 1863FBB921A4051200A133DC /* DesEntry.h */; };
 		1863FC1621A4051200A133DC /* DesEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 1863FBBA21A4051200A133DC /* DesEntry.m */; };
 		1863FC1721A4051200A133DC /* bfs.h in Headers */ = {isa = PBXBuildFile; fileRef = 1863FBBC21A4051200A133DC /* bfs.h */; };
@@ -149,6 +151,8 @@
 		1811A8BC219417A7005F658E /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		185873CF222641CF00A16DE8 /* XTUtils+Float.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XTUtils+Float.h"; sourceTree = "<group>"; };
 		185873D0222641CF00A16DE8 /* XTUtils+Float.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "XTUtils+Float.m"; sourceTree = "<group>"; };
+		185874022226613100A16DE8 /* XTUtils+Image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XTUtils+Image.h"; sourceTree = "<group>"; };
+		185874032226613100A16DE8 /* XTUtils+Image.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "XTUtils+Image.m"; sourceTree = "<group>"; };
 		1863FBB921A4051200A133DC /* DesEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesEntry.h; sourceTree = "<group>"; };
 		1863FBBA21A4051200A133DC /* DesEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DesEntry.m; sourceTree = "<group>"; };
 		1863FBBC21A4051200A133DC /* bfs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bfs.h; sourceTree = "<group>"; };
@@ -320,6 +324,8 @@
 				186E63A121A54B12002E7A77 /* XTUtils+UIKit.m */,
 				185873CF222641CF00A16DE8 /* XTUtils+Float.h */,
 				185873D0222641CF00A16DE8 /* XTUtils+Float.m */,
+				185874022226613100A16DE8 /* XTUtils+Image.h */,
+				185874032226613100A16DE8 /* XTUtils+Image.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -484,6 +490,7 @@
 				1863FC2721A4051200A133DC /* geometry.h in Headers */,
 				1863FC2621A4051200A133DC /* geodist.h in Headers */,
 				1863FC1B21A4051200A133DC /* cbc.h in Headers */,
+				185874042226613100A16DE8 /* XTUtils+Image.h in Headers */,
 				1863FC1521A4051200A133DC /* DesEntry.h in Headers */,
 				1863FC3521A4051200A133DC /* route.h in Headers */,
 				1863FC1C21A4051200A133DC /* chtbl.h in Headers */,
@@ -598,6 +605,7 @@
 				1863FC6921A4051300A133DC /* stack.c in Sources */,
 				1863FC3F21A4051200A133DC /* bfs.c in Sources */,
 				1811A8B121941641005F658E /* XTUtils+DES.m in Sources */,
+				185874052226613100A16DE8 /* XTUtils+Image.m in Sources */,
 				1811A8B521941641005F658E /* XTUtils.m in Sources */,
 				1863FC4921A4051200A133DC /* cvxhull.c in Sources */,
 				1863FC5521A4051200A133DC /* issort.c in Sources */,
