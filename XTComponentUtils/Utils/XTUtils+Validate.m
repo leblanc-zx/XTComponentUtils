@@ -19,7 +19,7 @@
 + (BOOL)validateMobile:(NSString *)mobile
 {
     //手机号以13， 15，18开头，八个 \d 数字字符
-    NSString *phoneRegex = @"^1[34578]\\d{9}$";
+    NSString *phoneRegex = @"^1[345678]\\d{9}$";
     NSPredicate *phoneTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",phoneRegex];
     return [phoneTest evaluateWithObject:mobile];
 }
