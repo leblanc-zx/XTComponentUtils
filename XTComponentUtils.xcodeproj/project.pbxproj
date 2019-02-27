@@ -25,6 +25,8 @@
 		1811A8B921941641005F658E /* NSString+XTHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 1811A8A921941641005F658E /* NSString+XTHash.m */; };
 		1811A8BB2194179B005F658E /* XTComponentUtils.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 1811A8BA2194179B005F658E /* XTComponentUtils.podspec */; };
 		1811A8BD219417A7005F658E /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 1811A8BC219417A7005F658E /* LICENSE */; };
+		185873D1222641CF00A16DE8 /* XTUtils+Float.h in Headers */ = {isa = PBXBuildFile; fileRef = 185873CF222641CF00A16DE8 /* XTUtils+Float.h */; };
+		185873D2222641CF00A16DE8 /* XTUtils+Float.m in Sources */ = {isa = PBXBuildFile; fileRef = 185873D0222641CF00A16DE8 /* XTUtils+Float.m */; };
 		1863FC1521A4051200A133DC /* DesEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = 1863FBB921A4051200A133DC /* DesEntry.h */; };
 		1863FC1621A4051200A133DC /* DesEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 1863FBBA21A4051200A133DC /* DesEntry.m */; };
 		1863FC1721A4051200A133DC /* bfs.h in Headers */ = {isa = PBXBuildFile; fileRef = 1863FBBC21A4051200A133DC /* bfs.h */; };
@@ -145,6 +147,8 @@
 		1811A8A921941641005F658E /* NSString+XTHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XTHash.m"; sourceTree = "<group>"; };
 		1811A8BA2194179B005F658E /* XTComponentUtils.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = XTComponentUtils.podspec; sourceTree = "<group>"; };
 		1811A8BC219417A7005F658E /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		185873CF222641CF00A16DE8 /* XTUtils+Float.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XTUtils+Float.h"; sourceTree = "<group>"; };
+		185873D0222641CF00A16DE8 /* XTUtils+Float.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "XTUtils+Float.m"; sourceTree = "<group>"; };
 		1863FBB921A4051200A133DC /* DesEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesEntry.h; sourceTree = "<group>"; };
 		1863FBBA21A4051200A133DC /* DesEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DesEntry.m; sourceTree = "<group>"; };
 		1863FBBC21A4051200A133DC /* bfs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bfs.h; sourceTree = "<group>"; };
@@ -314,6 +318,8 @@
 				186E639D21A54989002E7A77 /* XTUtils+MD5.m */,
 				186E63A021A54B12002E7A77 /* XTUtils+UIKit.h */,
 				186E63A121A54B12002E7A77 /* XTUtils+UIKit.m */,
+				185873CF222641CF00A16DE8 /* XTUtils+Float.h */,
+				185873D0222641CF00A16DE8 /* XTUtils+Float.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -466,6 +472,7 @@
 				1863FC3721A4051200A133DC /* set.h in Headers */,
 				186E639A21A54741002E7A77 /* XTUtils+Validate.h in Headers */,
 				186E63A221A54B12002E7A77 /* XTUtils+UIKit.h in Headers */,
+				185873D1222641CF00A16DE8 /* XTUtils+Float.h in Headers */,
 				186E639E21A54989002E7A77 /* XTUtils+MD5.h in Headers */,
 				1863FC2821A4051200A133DC /* graph.h in Headers */,
 				1863FC2221A4051200A133DC /* dlist.h in Headers */,
@@ -640,6 +647,7 @@
 				1863FC6121A4051300A133DC /* queue.c in Sources */,
 				1863FC6821A4051300A133DC /* spell.c in Sources */,
 				1863FC4321A4051200A133DC /* bitree.c in Sources */,
+				185873D2222641CF00A16DE8 /* XTUtils+Float.m in Sources */,
 				1863FC4E21A4051200A133DC /* frames.c in Sources */,
 				1863FC6221A4051300A133DC /* root.c in Sources */,
 			);
