@@ -126,4 +126,21 @@
     
 }
 
+/**
+ 获取某日期的后几个月的日期
+
+ @param month 月数
+ @param date 某日期
+ @return 结果日期
+ */
++ (NSDate *)dateAfterMonth:(int)month forDate:(NSDate *)date
+{
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *componentsToAdd = [[NSDateComponents alloc] init];
+    [componentsToAdd setMonth:month];
+    NSDate *dateAfterMonth = [calendar dateByAddingComponents:componentsToAdd toDate:date options:0];
+    
+    return dateAfterMonth;
+}
+
 @end

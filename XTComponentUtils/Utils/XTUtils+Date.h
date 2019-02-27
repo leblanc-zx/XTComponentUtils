@@ -77,6 +77,15 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (void)monthBegin:(NSDate **)monthBegin monthEnd:(NSDate **)monthEnd forDate:(NSDate *)date;
 
+/**
+ 获取某日期的后几个月的日期
+ 
+ @param month 月数
+ @param date 某日期
+ @return 结果日期
+ */
++ (NSDate *)dateAfterMonth:(int)month forDate:(NSDate *)date;
+
 @end
 
 NS_ASSUME_NONNULL_END
