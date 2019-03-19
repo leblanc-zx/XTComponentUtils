@@ -46,10 +46,24 @@
  @return 水印图片
  */
 + (UIImage *)waterImageWithOriginalImage:(UIImage *)originalImage text:(NSString *)text textPoint:(CGPoint)point attributedString:(NSDictionary * )attributed {
+    return [self waterImageWithOriginalImage:originalImage toSize:CGSizeMake(originalImage.size.width, originalImage.size.height) text:text textPoint:point attributedString:attributed];
+}
+
+/**
+ 给图片添加文字水印
+ 
+ @param originalImage 目标图片
+ @param toSize 新图片尺寸
+ @param text 文字
+ @param point 位置
+ @param attributed 文字的样式
+ @return 水印图片
+ */
++ (UIImage *)waterImageWithOriginalImage:(UIImage *)originalImage toSize:(CGSize)toSize text:(NSString *)text textPoint:(CGPoint)point attributedString:(NSDictionary * )attributed {
     //1.开启上下文
-    UIGraphicsBeginImageContextWithOptions(originalImage.size, NO, 0);
+    UIGraphicsBeginImageContextWithOptions(toSize, NO, 0);
     //2.绘制图片
-    [originalImage drawInRect:CGRectMake(0, 0, originalImage.size.width, originalImage.size.height)];
+    [originalImage drawInRect:CGRectMake(0, 0, toSize.width, toSize.height)];
     //添加水印文字
     [text drawAtPoint:point withAttributes:attributed];
     //3.从上下文中获取新图片
