@@ -11,30 +11,53 @@
 @implementation XTUtils (Image)
 
 /**
- 压缩图片到指定文件大小
-
+ 压缩图片到指定文件大小(只压缩6次)
+ 
  @param image 目标图片
- @param size 目标大小（最大值
+ @param size 目标大小（最大值)
+ @param limit 限制次数：YES时只压缩6次，NO时一直压缩到压缩不动为止
  @return 返回的图片文件
  */
-+ (NSData *)compressOriginalImage:(UIImage *)image toMaxDataSizeKBytes:(CGFloat)size{
-    NSData * data = UIImageJPEGRepresentation(image, 1.0);
-    CGFloat dataKBytes = data.length/1000.0;
-    CGFloat maxQuality = 0.9f;
-    CGFloat lastData = dataKBytes;
-    while (dataKBytes > size && maxQuality > 0.01f) {
-        maxQuality = maxQuality - 0.01f;
-        data = UIImageJPEGRepresentation(image, maxQuality);
-        dataKBytes = data.length / 1000.0;
-        if (lastData == dataKBytes) {
-            break;
-        }else{
-            lastData = dataKBytes;
++ (NSData *)compressOriginalImage:(UIImage *)image toMaxDataSizeKBytes:(CGFloat)size limit:(BOOL)limit {
+    if (limit) {
+        // 只压缩6次
+        CGFloat compression = 1;
+        NSData *data = UIImageJPEGRepresentation(image, compression);
+        if (data.length < size) return data;
+        
+        CGFloat max = 1;
+        CGFloat min = 0;
+        for (int i = 0; i < 6; ++i) {
+            compression = (max + min) / 2;
+            data = UIImageJPEGRepresentation(image, compression);
+            if (data.length < size * 0.9) {
+                min = compression;
+            } else if (data.length > size) {
+                max = compression;
+            } else {
+                break;
+            }
         }
+        return data;
+    } else {
+        // 一直压缩到压缩不动
+        NSData * data = UIImageJPEGRepresentation(image, 1.0);
+        CGFloat dataKBytes = data.length/1000.0;
+        CGFloat maxQuality = 0.9f;
+        CGFloat lastData = dataKBytes;
+        while (dataKBytes > size && maxQuality > 0.01f) {
+            maxQuality = maxQuality - 0.01f;
+            data = UIImageJPEGRepresentation(image, maxQuality);
+            dataKBytes = data.length / 1000.0;
+            if (lastData == dataKBytes) {
+                break;
+            }else{
+                lastData = dataKBytes;
+            }
+        }
+        return data;
     }
-    return data;
 }
-
 
 /**
  给图片添加文字水印

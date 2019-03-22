@@ -14,14 +14,14 @@ NS_ASSUME_NONNULL_BEGIN
 @interface XTUtils (Image)
 
 /**
- 压缩图片到指定文件大小
+ 压缩图片到指定文件大小(只压缩6次)
  
  @param image 目标图片
- @param size 目标大小（最大值
+ @param size 目标大小（最大值)
+ @param limit 限制次数：YES时只压缩6次，NO时一直压缩到压缩不动为止
  @return 返回的图片文件
  */
-+ (NSData *)compressOriginalImage:(UIImage *)image toMaxDataSizeKBytes:(CGFloat)size;
-
++ (NSData *)compressOriginalImage:(UIImage *)image toMaxDataSizeKBytes:(CGFloat)size limit:(BOOL)limit;
 
 /**
  给图片添加文字水印
