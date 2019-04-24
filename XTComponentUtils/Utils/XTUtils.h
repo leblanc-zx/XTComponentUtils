@@ -61,6 +61,22 @@
  */
 + (long)longWithHexString:(NSString *)hexString;
 
+/**
+ 2进制字符串 转 16进制字符串
+ 
+ @param binaryString 2进制字符串
+ @return 16进制字符串
+ */
++ (NSString *)hexStringWithBinaryString:(NSString *)binaryString;
+
+/**
+ 16进制字符串 转 2进制字符串
+ 
+ @param hexString 16进制字符串
+ @return 2进制字符串
+ */
++ (NSString *)binaryStringWithHexString:(NSString *)hexString;
+
 #pragma -mark 校验和
 
 /**
@@ -98,12 +114,20 @@
 + (NSString *)randomHex8;
 
 /**
- 反向NSData <<如：11223344 -> 44332211>>
+ 反向NSData <<如：12345678 -> 78563412>>
  
  @param originData 原始NSData
  @return 反向NSData
  */
 + (NSData *)reverseDataWithOriginData:(NSData *)originData;
+
+/**
+ 反向NSString <<如：12345678 -> 87654321>>
+ 
+ @param originString 原始NSString
+ @return 反向NSData
+ */
++ (NSString *)reverseStringWithOriginString:(NSString *)originString;
 
 /**
  四元数组 <<四个字符串一组>>
@@ -112,6 +136,14 @@
  @return 四元数组<<四个字符串一组>>
  */
 + (NSArray *)fourStringArrayWithOriginString:(NSString *)originString;
+
+/**
+ 异或运算
+ 
+ @param originData 原始NSData
+ @return 进行异或运算后的NSData
+ */
++ (NSData *)xorWithOriginData:(NSData *)originData;
 
 #pragma -mark utf8
 

@@ -135,6 +135,78 @@
     return [self longWithData:data];
 }
 
+/**
+ 2进制字符串 转 16进制字符串
+
+ @param binaryString 2进制字符串
+ @return 16进制字符串
+ */
++ (NSString *)hexStringWithBinaryString:(NSString *)binaryString {
+    NSMutableDictionary *hexDic = [[NSMutableDictionary alloc] init];
+    hexDic = [[NSMutableDictionary alloc] initWithCapacity:16];
+    [hexDic setObject:@"0" forKey:@"0000"];
+    [hexDic setObject:@"1" forKey:@"0001"];
+    [hexDic setObject:@"2" forKey:@"0010"];
+    [hexDic setObject:@"3" forKey:@"0011"];
+    [hexDic setObject:@"4" forKey:@"0100"];
+    [hexDic setObject:@"5" forKey:@"0101"];
+    [hexDic setObject:@"6" forKey:@"0110"];
+    [hexDic setObject:@"7" forKey:@"0111"];
+    [hexDic setObject:@"8" forKey:@"1000"];
+    [hexDic setObject:@"9" forKey:@"1001"];
+    [hexDic setObject:@"a" forKey:@"1010"];
+    [hexDic setObject:@"b" forKey:@"1011"];
+    [hexDic setObject:@"c" forKey:@"1100"];
+    [hexDic setObject:@"d" forKey:@"1101"];
+    [hexDic setObject:@"e" forKey:@"1110"];
+    [hexDic setObject:@"f" forKey:@"1111"];
+    NSMutableString *hexString = [[NSMutableString alloc] init];
+    for (int i = 0; i < binaryString.length; i += 4) {
+        NSRange range;
+        range.length = 4;
+        range.location = i;
+        NSString *key = [binaryString substringWithRange:range];
+        [hexString appendString:hexDic[key]];
+    }
+    return hexString;
+}
+
+/**
+ 16进制字符串 转 2进制字符串
+
+ @param hexString 16进制字符串
+ @return 2进制字符串
+ */
++ (NSString *)binaryStringWithHexString:(NSString *)hexString {
+    NSMutableDictionary  *hexDic = [[NSMutableDictionary alloc] init];
+    hexDic = [[NSMutableDictionary alloc] initWithCapacity:16];
+    [hexDic setObject:@"0000" forKey:@"0"];
+    [hexDic setObject:@"0001" forKey:@"1"];
+    [hexDic setObject:@"0010" forKey:@"2"];
+    [hexDic setObject:@"0011" forKey:@"3"];
+    [hexDic setObject:@"0100" forKey:@"4"];
+    [hexDic setObject:@"0101" forKey:@"5"];
+    [hexDic setObject:@"0110" forKey:@"6"];
+    [hexDic setObject:@"0111" forKey:@"7"];
+    [hexDic setObject:@"1000" forKey:@"8"];
+    [hexDic setObject:@"1001" forKey:@"9"];
+    [hexDic setObject:@"1010" forKey:@"a"];
+    [hexDic setObject:@"1011" forKey:@"b"];
+    [hexDic setObject:@"1100" forKey:@"c"];
+    [hexDic setObject:@"1101" forKey:@"d"];
+    [hexDic setObject:@"1110" forKey:@"e"];
+    [hexDic setObject:@"1111" forKey:@"f"];
+    NSMutableString *binaryString = [[NSMutableString alloc] init];
+    for (int i = 0; i < [hexString length]; i ++) {
+        NSRange range;
+        range.length = 1;
+        range.location = i;
+        NSString *key = [[hexString substringWithRange:range] lowercaseString];
+        [binaryString appendString:hexDic[key]];
+    }
+    return binaryString;
+}
+
 #pragma -mark 校验和
 
 /**
@@ -219,7 +291,7 @@
 }
 
 /**
- 反向NSData <<如：11223344 -> 44332211>>
+ 反向NSData <<如：12345678 -> 78563412>>
  
  @param originData 原始NSData
  @return 反向NSData
@@ -236,6 +308,21 @@
 }
 
 /**
+ 反向NSString <<如：12345678 -> 87654321>>
+ 
+ @param originString 原始NSString
+ @return 反向NSData
+ */
++ (NSString *)reverseStringWithOriginString:(NSString *)originString {
+    
+    NSMutableString *resultStr = [[NSMutableString alloc] init];
+    for (long i = originString.length; i >= 1; i -= 1) {
+        [resultStr appendString:[originString substringWithRange:NSMakeRange(i-1, 1)]];
+    }
+    return resultStr;
+}
+
+/**
  四元数组 <<四个字符串一组>>
  
  @param originString 原始字符串
@@ -247,6 +334,27 @@
         [array addObject:[originString substringWithRange:NSMakeRange(i, 4)]];
     }
     return array;
+}
+
+/**
+ 异或运算
+
+ @param originData 原始NSData
+ @return 进行异或运算后的NSData
+ */
++ (NSData *)xorWithOriginData:(NSData *)originData {
+    int len = (int)originData.length;
+    NSMutableData *resultData = [[NSMutableData alloc] init];
+    for (int i = 0; i < len; i ++) {
+        int ten = (int)[self longWithData:[originData subdataWithRange:NSMakeRange(i, 1)]];
+        int ffTen = (int)[self longWithHexString:@"FF"];
+        NSString *xorStr = [NSString stringWithFormat:@"%x",ten^ffTen];
+        if (xorStr.length == 1) {
+            xorStr = [NSString stringWithFormat:@"0%@",xorStr];
+        }
+        [resultData appendData:[self dataWithHexString:xorStr]];
+    }
+    return resultData;
 }
 
 #pragma -mark utf8
