@@ -66,6 +66,48 @@
 }
 
 /**
+ 16进制字符串 转 NSData(固定NSData长度)
+ 
+ @param hexString 16进制字符串
+ @param length NSData长度(字符串长度不足,高位补0；字符串长度过长,末尾有效)
+ @return NSData
+ */
++ (NSData *)dataWithHexString:(NSString *)hexString length:(int)length {
+    
+    if (hexString.length%2 == 1) {
+        hexString = [NSString stringWithFormat:@"0%@",hexString];
+    }
+    
+    int hexLength = (int)hexString.length/2;
+    Byte *bytes = (Byte *)malloc(hexLength*2);
+    
+    for (int i = 0; i < hexLength; i ++) {
+        NSString *hexStr = [hexString substringWithRange:NSMakeRange(i*2, 2)];
+        bytes[i] = strtoul([hexStr UTF8String], 0, 16) & 0xff;
+    }
+    
+    NSData *data = [NSData dataWithBytes:bytes length:hexLength];
+    
+    NSMutableData *resultData = [[NSMutableData alloc] init];
+    if (data.length < length) {
+        //字符串长度不足,高位补0
+        for (int m = 0; m < length-data.length; m ++) {
+            [resultData appendData:[self dataWithHexString:@"00"]];
+        }
+        [resultData appendData:data];
+    } else if (data.length > length) {
+        //字符串长度过长,取末尾数据
+        [resultData appendData:[data subdataWithRange:NSMakeRange(data.length-length, length)]];
+    } else {
+        //正正好
+        [resultData appendData:data];
+    }
+    
+    return resultData;
+    
+}
+
+/**
  将Long变成NSData（length个字节）
  
  @param value 整数

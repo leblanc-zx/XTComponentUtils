@@ -126,6 +126,8 @@
 		186E63A221A54B12002E7A77 /* XTUtils+UIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 186E63A021A54B12002E7A77 /* XTUtils+UIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		186E63A321A54B12002E7A77 /* XTUtils+UIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 186E63A121A54B12002E7A77 /* XTUtils+UIKit.m */; };
 		186E63A621A54BCE002E7A77 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 186E63A521A54BCE002E7A77 /* UIKit.framework */; };
+		18D61AA922759B8900F00D37 /* XTUtils+NonStandard.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D61AA722759B8900F00D37 /* XTUtils+NonStandard.m */; };
+		18D61AAA22759B8900F00D37 /* XTUtils+NonStandard.h in Headers */ = {isa = PBXBuildFile; fileRef = 18D61AA822759B8900F00D37 /* XTUtils+NonStandard.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -250,6 +252,8 @@
 		186E63A021A54B12002E7A77 /* XTUtils+UIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XTUtils+UIKit.h"; sourceTree = "<group>"; };
 		186E63A121A54B12002E7A77 /* XTUtils+UIKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "XTUtils+UIKit.m"; sourceTree = "<group>"; };
 		186E63A521A54BCE002E7A77 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		18D61AA722759B8900F00D37 /* XTUtils+NonStandard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XTUtils+NonStandard.m"; sourceTree = "<group>"; };
+		18D61AA822759B8900F00D37 /* XTUtils+NonStandard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XTUtils+NonStandard.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -308,6 +312,8 @@
 			children = (
 				1811A8A321941641005F658E /* XTUtils.h */,
 				1811A8A421941641005F658E /* XTUtils.m */,
+				18D61AA822759B8900F00D37 /* XTUtils+NonStandard.h */,
+				18D61AA722759B8900F00D37 /* XTUtils+NonStandard.m */,
 				1811A89B21941641005F658E /* XTUtils+AES.h */,
 				1811A89C21941641005F658E /* XTUtils+AES.m */,
 				1811A89D21941641005F658E /* XTUtils+Date.h */,
@@ -474,6 +480,7 @@
 				1863FC1F21A4051200A133DC /* cover.h in Headers */,
 				1863FC1721A4051200A133DC /* bfs.h in Headers */,
 				1863FC2121A4051200A133DC /* directls.h in Headers */,
+				18D61AAA22759B8900F00D37 /* XTUtils+NonStandard.h in Headers */,
 				1863FC3B21A4051200A133DC /* symbol.h in Headers */,
 				1863FC3721A4051200A133DC /* set.h in Headers */,
 				186E639A21A54741002E7A77 /* XTUtils+Validate.h in Headers */,
@@ -596,6 +603,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18D61AA922759B8900F00D37 /* XTUtils+NonStandard.m in Sources */,
 				1863FC5721A4051200A133DC /* lint.c in Sources */,
 				1863FC5121A4051200A133DC /* hashpjw.c in Sources */,
 				1863FC5C21A4051200A133DC /* mst.c in Sources */,

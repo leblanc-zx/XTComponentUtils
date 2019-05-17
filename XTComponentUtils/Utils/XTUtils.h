@@ -29,6 +29,15 @@
 + (NSData *)dataWithHexString:(NSString *)hexString;
 
 /**
+ 16进制字符串 转 NSData(固定NSData长度)
+ 
+ @param hexString 16进制字符串
+ @param length NSData长度(字符串长度不足,高位补0；字符串长度过长,末尾有效)
+ @return NSData
+ */
++ (NSData *)dataWithHexString:(NSString *)hexString length:(int)length;
+
+/**
  将Long变成NSData（length个字节）
  
  @param value 整数
